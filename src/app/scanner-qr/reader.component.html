@@ -1,0 +1,10 @@
+<div class="container">
+    <div [hidden]="!hasCameras">
+        <zxing-scanner #scanner class="test-class" start="true" [device]="selectedDevice" (scanSuccess)="handleQrCodeResult($event)"></zxing-scanner>
+        <h2 *ngIf="!this.selectedDevice">No camera elegida.</h2>
+        <p>
+          Usuario:
+          <strong>{{ usuarioRegresado }}</strong>
+        </p>
+      </div>
+</div>

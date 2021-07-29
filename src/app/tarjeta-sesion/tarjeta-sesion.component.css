@@ -1,0 +1,25 @@
+.green{
+    background-color: green;
+    color: white;
+}
+
+.red{    
+    background-color: red;
+    color: white;
+}
+.b-green{
+    border-color: green;
+}
+
+.b-red{
+    border-color: red;
+}
+
+.blue{
+    background-color: blue;
+    color: white;
+}
+
+.b-blue{
+    border-color: blue;
+}

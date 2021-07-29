@@ -1,0 +1,62 @@
+<app-menu ></app-menu>
+<div class="container">
+    <p class="display-4  text-center pb-3 text-primary">Agenda Diaria</p>
+  <div class="accordion accordion-icons" id="accordionExample">
+    <div class="card">
+      <div class="card-header" id="headingOne">
+        <h2 class="mb-0">
+          <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne"
+            aria-expanded="true" aria-controls="collapseOne">            
+            <!-- <i class="fa fa-folder-o" aria-hidden="true"></i> -->
+              Sesiones Programadas                           
+          </button>
+        </h2>
+      </div>
+
+      <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+        <div class="card-body">          
+          
+          <!-- aui van las sessiones de la base -->
+          <!-- <tarjeta></tarjeta> -->
+          <div class="container">
+              <app-tarjeta-sesion></app-tarjeta-sesion>
+              
+              
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-header" id="headingTwo">
+        <h2 class="mb-0">
+          <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo"
+            aria-expanded="false" aria-controls="collapseTwo">            
+            Breaks Programados
+          </button>
+        </h2>
+      </div>
+      <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+        <div class="card-body">
+          <!-- aui van los breaks de la base -->
+          <!-- <app-tarjeta-sesion></app-tarjeta-sesion> -->
+          <app-tarjeta-break></app-tarjeta-break>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-header" id="headingThree">
+        <h2 class="mb-0">
+          <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree"
+            aria-expanded="false" aria-controls="collapseThree">            
+            Almuerzos Programados
+          </button>
+        </h2>
+      </div>
+      <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+        <div class="card-body">
+          <!-- aui van los almuerzos de la base -->
+          <app-tarjeta-almuerzo></app-tarjeta-almuerzo>
+        </div>
+      </div>
+    </div>
+  </div>

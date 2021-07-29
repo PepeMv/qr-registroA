@@ -1,0 +1,27 @@
+<div *ngFor="let tarjeta of tarjetasSesion">
+    <div class="container">
+        <div class="row text-center">
+            <article class="col-12  col-md-12 ">
+                <div class="card mb-3 b-{{tarjeta.color}}">
+                    <div class="card-header {{tarjeta.color}}"> <strong>{{tarjeta.nombreAuditorio}}</strong> -
+                        {{tarjeta.f_h_inicio | date: 'medium'}}</div>
+                    <div class="card-body">
+                        <h5 class="card-title">{{tarjeta.nombreSesion}}</h5>
+                        <p class="card-text">{{tarjeta.descripcion}}.</p>
+                        <button (click)="actualizarEstado(tarjeta.id,'abierto')" type="button"
+                            *ngIf="tarjeta.estado == 'cerrado'" class="btn btn-success m-2">Iniciar</button>
+                        <button (click)="actualizarEstado(tarjeta.id,'cerrado')" type="button"
+                            *ngIf="tarjeta.estado != 'cerrado'" class="btn btn-secondary m-2">Cerrar</button>
+                        <input type="hidden" value="tarjeta.id" id="id" #idTrajeta>
+                        <button type="button" class="btn btn-primary" data-toggle="modal"
+                            (click)="onSubmit(tarjeta.nombreSesion,tarjeta.id)" data-target="#modalqr">
+                            Asistencia
+                        </button>
+                        <app-modal-qr [titulo]="tituloModal" [id]="idSesion"></app-modal-qr>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </div>
+
+</div>
